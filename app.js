@@ -114,11 +114,7 @@ app.post("/delete", (req, res) => {
         })
     }
 })
-let port = process.evn.PORT;
-if(port === null || port === ""){
-    port = 3000
-}
 
-app.listen(port, () => {
+app.listen(process.evn.PORT || 3000, () => {
     console.log("Server Is Running");
 })
